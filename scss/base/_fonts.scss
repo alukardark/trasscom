@@ -19,6 +19,15 @@
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
+	font-weight: 500;
+	src: url("../fonts/Roboto/RobotoMedium.eot") format("eot"),
+	url("../fonts/Roboto/RobotoMedium.woff") format("woff"),
+	url("../fonts/Roboto/RobotoMedium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
 	font-weight: bold;
 	src: url("../fonts/Roboto/RobotoBold.eot") format("eot"),
 	url("../fonts/Roboto/RobotoBold.woff") format("woff"),
