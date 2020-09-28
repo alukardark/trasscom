@@ -1,0 +1,115 @@
+.header {
+  background: #fff;
+  padding-top: 23px;
+  padding-bottom: 15px;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: block;
+    min-width: 286px;
+    margin-right: 10px;
+  }
+  &__logo-picture {
+    display: block;
+    width: 286px;
+    min-width: 286px;
+    height: 44px;
+    background: url(../img/logo.svg) center/contain no-repeat;
+    margin-bottom: 3px;
+  }
+  &__logo-desc {
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  &__search{
+    position: relative;
+    margin-right: 10px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 18px;
+      width: 16px;
+      height: 16px;
+      background: url(../img/search.svg) center/contain no-repeat;
+
+    }
+
+
+    input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    input::-moz-placeholder {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    input:-moz-placeholder {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    input:-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  &__search-input{
+    width: 312px;
+    height: 47px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-left: 47px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__address{
+    line-height: 130%;
+    max-width: 227px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    &:before{
+      content: '';
+      background: url(../img/marker.svg) center/contain no-repeat;
+      min-width: 12px;
+      width: 12px;
+      height: 16px;
+      margin-right: 15px;
+    }
+  }
+  &__email{
+    display: flex;
+    align-items: center;
+    transition: .2s ease-in-out all;
+    margin-right: 10px;
+    &:before{
+      content: '';
+      background: url(../img/mail.svg) center/contain no-repeat;
+      min-width: 15px;
+      width: 15px;
+      height: 12px;
+      margin-right: 10px;
+      transform: translateY(1px);
+    }
+    &:hover{
+      opacity: .7;
+    }
+  }
+  &__tel{
+    font-weight: bold;
+    font-size: 18px;
+    transition: .2s ease-in-out all;
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+}
+
+@media (max-width: $md) {
+  .header {
+
+  }
+}
