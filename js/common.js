@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-    var mySwiper = new Swiper('.main__slider .swiper-container', {
+    var mainSwiper = new Swiper('.main__slider .swiper-container', {
         loop: true,
         slidesPerView: 1,
         autoplay: {
@@ -36,6 +36,22 @@ jQuery(document).ready(function($) {
     });
 
 
+    var reviewsSwiper = new Swiper('.reviews__slider .swiper-container', {
+        loop: true,
+        autoHeight: true,
+        slidesPerView: 1,
+        speed: 600,
+        navigation: {
+            nextEl: '.reviews__slider .reviews__slider-next',
+            prevEl: '.reviews__slider .reviews__slider-prev',
+        },
+
+    });
+
+
+    $('.footer__up').click(function(){
+        $("html, body").stop().animate({scrollTop:0}, 800);
+    });
 
 
 });

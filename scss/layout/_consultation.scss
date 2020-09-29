@@ -1,0 +1,57 @@
+.consultation{
+  color: #fff;
+  background: url(../img/consultation.jpg) center/cover no-repeat;
+  padding: 110px 0;
+  &__desc{
+    font-size: 23px;
+    line-height: 137.69%;
+    margin-bottom: 60px;
+  }
+  h2{
+    margin-bottom: 25px;
+  }
+  form{
+    display: flex;
+    input[type="text"], input[type="email"], input[type="tel"]{
+      max-width: 312px;
+      width: 100%;
+
+      background: #FFFFFF;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+
+      font-size: 18px;
+      height: 60px;
+      margin-right: 20px;
+      padding: 0 22px;
+
+      &::-webkit-input-placeholder {
+        color: #5D5D6F;
+      }
+      &::-moz-placeholder {
+        color: #5D5D6F;
+      }
+      &:-moz-placeholder {
+        color: #5D5D6F;
+      }
+      &:-ms-input-placeholder {
+        color: #5D5D6F;
+      }
+    }
+    input[type="submit"]{
+      max-width: 305px;
+      width: 100%;
+
+      font-weight: 500;
+      font-size: 18px;
+      color: #FFFFFF;
+      background: #B40600;
+      border-radius: 5px;
+      height: 60px;
+      transition: .2s ease-in-out background;
+      &:hover{
+        background: #8c0600;
+      }
+    }
+  }
+}
