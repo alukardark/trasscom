@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
     var mainSwiper = new Swiper('.main__slider .swiper-container', {
         loop: true,
         slidesPerView: 1,
+        autoHeight: true,
         autoplay: {
             delay: 3000
         },
@@ -51,6 +52,13 @@ jQuery(document).ready(function($) {
 
     $('.footer__up').click(function(){
         $("html, body").stop().animate({scrollTop:0}, 800);
+    });
+
+
+    $('.burger').click(function(){
+        $('body').toggleClass('modal-open');
+        // $('.burger').toggleClass('active');
+        $('.header__mobile-open').toggleClass('active');
     });
 
 

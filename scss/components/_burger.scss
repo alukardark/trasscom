@@ -1,17 +1,22 @@
 .burger {
   cursor: pointer;
-  width: 30px;
-  height: 23px;
-  display: none;
-  margin-right: 10px;
   position: relative;
-  &.active{
+
+  width: 66px;
+  height: 66px;
+  background: #11161B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease-in-out background;
+  &.active {
 
   }
   &:hover {
+    background: #2f3d4b;
     span {
       &, &:before, &:after {
-        background: rgba(17, 13, 16, 0.82);
+        //background: rgba(17, 13, 16, 0.82);
       }
     }
   }
@@ -21,7 +26,8 @@
       vertical-align: middle;
       width: 30px;
       height: 4px;
-      background: #110D10;
+      background: #FFFFFF;
+      border-radius: 1px;
       position: relative;
       top: 0px;
       transition: all .3s ease-in-out;
@@ -66,7 +72,33 @@
   .burger {
   }
 }
+
 @media (max-width: $sm) {
   .burger {
+    width: 50px;
+    height: 50px;
+    span {
+      &, &:before, &:after {
+        width: 23px;
+        height: 3px;
+      }
+      &:after {
+        bottom: 7px;
+      }
+      &:before {
+        top: 7px;
+      }
+    }
+    &.active {
+      span {
+        &:before {
+          transform: translate(0px, -7px) rotate(-90deg);
+        }
+        &:after {
+          transform: translate(0px, 7px) rotate(-90deg);
+        }
+
+      }
+    }
   }
 }
