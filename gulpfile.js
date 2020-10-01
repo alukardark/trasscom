@@ -15,6 +15,7 @@ gulp.task('sass', function(done) {
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/simplebar/dist/simplebar.min.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         'node_modules/bodymovin/build/player/bodymovin.min.js',
         'node_modules/js-cookie/src/js.cookie.js',

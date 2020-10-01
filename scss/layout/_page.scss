@@ -90,6 +90,7 @@
 
   table {
     width: 100%;
+    min-width: 600px;
     border-top: 2px solid #49495A;
     tr {
 
@@ -116,7 +117,9 @@
       margin-top: 85px;
     }
   }
-
+  .scrollbar  + h4 {
+    margin-top: 85px;
+  }
   &__back {
     padding-right: 10px;
     margin-top: 84px;
@@ -176,7 +179,7 @@
     ul {
       li {
         font-size: 16px;
-        &:before{
+        &:before {
           top: 11px;
         }
       }
@@ -191,10 +194,13 @@
       margin-top: 50px;
       margin-bottom: 25px;
     }
-     table + h4 {
+    table + h4 {
       margin-top: 65px;
     }
-    &__back{
+    .scrollbar  + h4 {
+      margin-top: 65px;
+    }
+    &__back {
       margin-top: 60px;
     }
     .box {
@@ -214,14 +220,17 @@
 
 @media (max-width: $md) {
   .page {
-    ul, ol{
+    ul, ol {
       flex-direction: column;
-      li{
+      li {
         width: 100%;
       }
     }
-    table{
-      td{
+    .scrollbar {
+    }
+    table {
+
+      td {
         font-size: 14px;
         padding: 18px 15px;
       }
@@ -232,7 +241,7 @@
 @media (max-width: $sm) {
   .page {
     padding: 40px 0 40px;
-    &__product-img{
+    &__product-img {
       height: 265px;
     }
   }

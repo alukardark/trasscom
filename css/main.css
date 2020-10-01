@@ -8046,6 +8046,217 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px; }
 
+[data-simplebar] {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit; }
+
+.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit; }
+
+.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0; }
+
+.simplebar-offset {
+  direction: inherit !important;
+  box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch; }
+
+.simplebar-content {
+  direction: inherit;
+  box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100%;
+  width: auto;
+  visibility: visible;
+  overflow: scroll;
+  max-width: 100%;
+  max-height: 100%; }
+
+.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none; }
+
+.simplebar-height-auto-observer-wrapper {
+  box-sizing: inherit !important;
+  height: 100%;
+  width: inherit;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  flex-grow: inherit;
+  flex-shrink: 0;
+  flex-basis: 0; }
+
+.simplebar-height-auto-observer {
+  box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1; }
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; }
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all; }
+
+.simplebar-scrollbar {
+  position: absolute;
+  right: 2px;
+  width: 7px;
+  min-height: 10px; }
+
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: #000;
+  border-radius: 7px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .2s linear; }
+
+.simplebar-track .simplebar-scrollbar.simplebar-visible:before {
+  opacity: .5;
+  transition: opacity 0s linear; }
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px; }
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px; }
+
+.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px; }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px; }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto; }
+
+[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0; }
+
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+.scrollbar .simplebar-content {
+  padding-right: 0px !important;
+  padding-left: 0px !important; }
+
+.scrollbar .simplebar-scrollbar {
+  width: 4px;
+  right: 0px; }
+
+.scrollbar .simplebar-scrollbar:before {
+  background-color: #B40600;
+  border-radius: 0px; }
+
+.scrollbar .simplebar-track.simplebar-vertical {
+  transition: .5s ease-in-out height;
+  background-color: #E4E4E4;
+  width: 4px;
+  border-radius: 0px; }
+
+.scrollbar .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  opacity: 1;
+  top: 0px;
+  bottom: 0px; }
+
+.scrollbar .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  display: none; }
+
+.scrollbar--horizontal .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  display: block;
+  opacity: 1; }
+
+.scrollbar--horizontal .simplebar-track.simplebar-horizontal {
+  transition: .5s ease-in-out height;
+  background-color: #E4E4E4;
+  height: 4px;
+  border-radius: 0px; }
+
+.scrollbar--horizontal .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  height: 4px;
+  top: 0;
+  left: 0; }
+
+.scrollbar--horizontal .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  left: 0px;
+  right: 0px; }
+
 /**
  * Set up a decent box model on the root element
  */
@@ -8427,6 +8638,9 @@ h4 {
     .header__tel:hover {
       opacity: .7; }
   .header__mobile-open {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
     padding: 15px;
     position: fixed;
     top: 0;
@@ -8487,7 +8701,6 @@ h4 {
   .header__menu {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(112, 112, 140, 0.2);
     margin-bottom: 20px;
     padding-bottom: 15px;
     margin-top: 15px; }
@@ -8500,7 +8713,8 @@ h4 {
       .header__menu a:hover {
         color: rgba(255, 255, 255, 0.7); }
   .header__search-row {
-    position: relative; }
+    position: relative;
+    height: 47px; }
 
 @media (max-width: 1320px) {
   .header__search-input {
@@ -8546,7 +8760,9 @@ h4 {
     .header__address {
       color: rgba(255, 255, 255, 0.7);
       font-size: 14px;
-      margin-bottom: 12px; }
+      margin-bottom: 12px;
+      border-top: 1px solid rgba(112, 112, 140, 0.2);
+      padding-top: 20px; }
     .header a.header__email {
       color: rgba(255, 255, 255, 0.7);
       font-size: 14px;
@@ -8592,7 +8808,45 @@ h4 {
         margin-right: 12px; }
     .header__mobile-open.active {
       transform: translateX(0);
-      opacity: 1; } }
+      opacity: 1; }
+    .header__search {
+      transition: .2s ease-in-out opacity, .2s ease-in-out transform, .2s ease-in-out visibility; }
+      .header__search.hide {
+        height: 0;
+        transform: translateX(-20px);
+        opacity: 0;
+        visibility: hidden; }
+    .header__mobile-back {
+      font-family: "PF DinDisplay Pro";
+      font-size: 16px;
+      color: #747474;
+      cursor: pointer;
+      transition: .2s ease-in-out opacity, .2s ease-in-out transform, .2s ease-in-out visibility;
+      position: absolute;
+      top: 9px;
+      left: 0; }
+      .header__mobile-back:before {
+        display: inline-block;
+        content: '';
+        background: url(../img/arrow-gray.svg) center/contain no-repeat;
+        width: 10px;
+        height: 15px;
+        margin-right: 16px;
+        transform: translateY(2px); }
+      .header__mobile-back:hover {
+        opacity: .8; }
+      .header__mobile-back.hide {
+        transform: translateX(-20px);
+        opacity: 0;
+        visibility: hidden; }
+    .header__menu {
+      transition: .2s ease-in-out opacity, .2s ease-in-out transform, .2s ease-in-out visibility; }
+      .header__menu.hide {
+        height: 0;
+        transform: translateX(-20px);
+        opacity: 0;
+        visibility: hidden;
+        position: absolute; } }
 
 @media (max-width: 767px) {
   .header__tel {
@@ -9717,6 +9971,10 @@ h4 {
   flex-direction: column;
   width: 260px;
   margin-bottom: 145px; }
+  .products__item:hover .products__img {
+    filter: contrast(108%); }
+  .products__item:hover .products__title {
+    color: #515151; }
 
 .products__img {
   background-repeat: no-repeat;
@@ -9725,7 +9983,8 @@ h4 {
   width: 100%;
   height: 250px;
   margin-bottom: 12px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  transition: .15s ease-in-out filter; }
 
 .products__title {
   font-family: "PF DinDisplay Pro";
@@ -9733,7 +9992,8 @@ h4 {
   font-size: 22px;
   line-height: 1.2;
   color: #000000;
-  padding-right: 10px; }
+  padding-right: 10px;
+  transition: .2s ease-in-out color; }
 
 @media (max-width: 1199px) {
   .products__item {
@@ -9835,6 +10095,7 @@ h4 {
         font-weight: 500; }
   .page table {
     width: 100%;
+    min-width: 600px;
     border-top: 2px solid #49495A; }
     .page table tr:nth-child(2n+1) {
       background: #fff; }
@@ -9851,6 +10112,8 @@ h4 {
         width: 40%; }
     .page table + h4 {
       margin-top: 85px; }
+  .page .scrollbar + h4 {
+    margin-top: 85px; }
   .page__back {
     padding-right: 10px;
     margin-top: 84px;
@@ -9906,6 +10169,8 @@ h4 {
       margin-top: 50px;
       margin-bottom: 25px; }
     .page table + h4 {
+      margin-top: 65px; }
+    .page .scrollbar + h4 {
       margin-top: 65px; }
     .page__back {
       margin-top: 60px; }
