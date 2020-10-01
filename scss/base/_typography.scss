@@ -30,7 +30,9 @@ p {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 50px;
+  margin-bottom: 60px;
+  font-weight: 500;
 }
 
 h2 {
@@ -40,9 +42,16 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 10px;
   font-weight: 500;
+}
+
+h4 {
+  font-size: 23px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: $font-basic;
 }
 
 @media (max-width: $xl) {
@@ -54,20 +63,34 @@ h3 {
   p {
     font-size: 16px;
   }
+  h1 {
+    font-size: 45px;
+    line-height: 43px;
+    margin-bottom: 50px;
+  }
   h2 {
     font-size: 45px;
     line-height: 43px;
+  }
+  h3 {
+    font-size: 34px;
   }
 }
 
 @media (max-width: $md) {
   h1 {
+    font-size: 40px;
+    line-height: 1;
   }
   h2 {
     font-size: 40px;
     line-height: 1;
   }
   h3 {
+    font-size: 34px;
+  }
+  h4 {
+    font-size: 20px;
   }
   p {
     margin-bottom: 20px;
@@ -76,12 +99,18 @@ h3 {
 
 @media (max-width: $sm) {
   h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
   }
   h2 {
     font-size: 38px;
     margin-bottom: 25px;
   }
   h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
   }
   p {
   }

@@ -1,0 +1,239 @@
+.page {
+  padding: 80px 0 75px;
+  h3 {
+    margin-top: 80px;
+    margin-bottom: 35px;
+  }
+  &__order {
+    width: 100%;
+    height: 63px;
+    background: #B40600;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    transition: .2s ease-in-out background;
+    &:hover {
+      color: #fff;
+      background: #8c0600;
+    }
+  }
+  &__product-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    margin-left: auto;
+  }
+  .box {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    h3 {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+    &.box-product {
+      width: 420px;
+      float: right;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      font-weight: normal;
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 50%;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 12px;
+        height: 5px;
+        background: #B40600;
+        border-radius: 10px;
+      }
+    }
+  }
+  ol {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    li {
+      font-weight: normal;
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 10px;
+      position: relative;
+      &:before {
+        color: #B40600;
+        font-weight: 500;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-top: 2px solid #49495A;
+    tr {
+
+      &:nth-child(2n+1) {
+        background: #fff;
+      }
+      &:nth-child(2n+2) {
+        background: transparent;
+      }
+    }
+    td {
+      padding: 18px 25px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #000000;
+      strong {
+        font-weight: 500;
+      }
+      &:first-of-type {
+        width: 40%;
+      }
+    }
+    & + h4 {
+      margin-top: 85px;
+    }
+  }
+
+  &__back {
+    padding-right: 10px;
+    margin-top: 84px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    width: 142px;
+    height: 45px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-in-out background;
+    &:before {
+      margin-right: 5px;
+      content: '';
+      width: 15px;
+      height: 15px;
+      display: block;
+      transition: .2s ease-in-out transform;
+      transform: translateY(2px) translateX(-5px) rotate(180deg);
+      background: url(../img/arrow-black.svg) center no-repeat;
+    }
+    &:hover {
+      background: #d2d2d2;
+      &:before {
+        transform: translateY(2px) translateX(-10px) rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .page {
+    .box {
+      width: 55%;
+      &.box-product {
+        width: 100%;
+        max-width: 340px;
+      }
+    }
+    &__product-img {
+      width: 100%;
+      height: 320px;
+    }
+    &__order {
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+    }
+    ol {
+      li {
+        font-size: 16px;
+      }
+    }
+    ul {
+      li {
+        font-size: 16px;
+        &:before{
+          top: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .page {
+    padding: 55px 0 40px;
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+     table + h4 {
+      margin-top: 65px;
+    }
+    &__back{
+      margin-top: 60px;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      order: 1;
+
+      &.box-product {
+        order: 0;
+        float: none;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .page {
+    ul, ol{
+      flex-direction: column;
+      li{
+        width: 100%;
+      }
+    }
+    table{
+      td{
+        font-size: 14px;
+        padding: 18px 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .page {
+    padding: 40px 0 40px;
+    &__product-img{
+      height: 265px;
+    }
+  }
+}

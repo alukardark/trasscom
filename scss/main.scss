@@ -44,14 +44,18 @@
 'layout/reviews',
 'layout/news',
 'layout/consultation',
-'layout/footer'
+'layout/footer',
+'layout/products',
+'layout/page'
 ;
 
 
 // 5. Components
 @import
 //'components/checkbox-list',
-'components/burger';
+'components/burger',
+'components/submenu',
+'components/mailing';
 //'components/breadcrumbs',
 //'components/button',
 //'components/modal',
