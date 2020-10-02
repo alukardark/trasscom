@@ -57,7 +57,6 @@ jQuery(document).ready(function ($) {
 
     $('.burger').click(function () {
         $('body').toggleClass('modal-open');
-        // $('.burger').toggleClass('active');
         $('.header__mobile-open').toggleClass('active');
     });
 
@@ -68,9 +67,6 @@ jQuery(document).ready(function ($) {
             autoHide: false
         });
     });
-
-
-
 
 
     if ($('.submenu').length > 0) {
@@ -92,7 +88,7 @@ jQuery(document).ready(function ($) {
                 $('.header__search').removeClass('hide');
             }, 500);
         });
-    }else{
+    } else {
         $('.header__search ').removeClass('hide');
         $('.header__mobile-back ').addClass('hide')
 
