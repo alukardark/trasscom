@@ -1,5 +1,5 @@
 .page {
-  padding: 80px 0 75px;
+  padding: 00px 0 75px;
   h3 {
     margin-top: 80px;
     margin-bottom: 35px;
@@ -189,7 +189,7 @@
 
 @media (max-width: $lg) {
   .page {
-    padding: 55px 0 40px;
+    padding: 0px 0 40px;
     h3 {
       margin-top: 50px;
       margin-bottom: 25px;
@@ -240,7 +240,7 @@
 
 @media (max-width: $sm) {
   .page {
-    padding: 40px 0 40px;
+    padding: 0px 0 40px;
     &__product-img {
       height: 265px;
     }
