@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
     var mainSwiper = new Swiper('.main__slider .swiper-container', {
         loop: true,
         slidesPerView: 1,
-        autoHeight: true,
+        // autoHeight: true,
         autoplay: {
             delay: 3000
         },
@@ -34,6 +34,35 @@ jQuery(document).ready(function ($) {
         //         spaceBetween: 15,
         //     }
         // },
+    });
+
+    var certificatesSwiper = new Swiper('.certificates-slider__slider .swiper-container', {
+        loop: true,
+        slidesPerView: 5,
+        spaceBetween: 24,
+        speed: 600,
+        navigation: {
+            nextEl: '.certificates-slider__slider .certificates__slider-next',
+            prevEl: '.certificates-slider__slider .certificates__slider-prev',
+        },
+        breakpoints: {
+            1199: {
+                spaceBetween: 24,
+                slidesPerView: 4,
+            },
+            989: {
+                spaceBetween: 24,
+                slidesPerView: 3,
+            },
+            767: {
+                spaceBetween: 24,
+                slidesPerView: 2,
+            },
+            575: {
+                spaceBetween: 24,
+                slidesPerView: 1,
+            }
+        },
     });
 
 

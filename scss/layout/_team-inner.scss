@@ -1,18 +1,159 @@
-.team-inner{
-  &__photo{
+.team-inner {
+  &__wrap {
+    display: flex;
+    margin-bottom: 70px;
+    position: relative;
+  }
+  &__photo {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 340px;
+    min-width: 340px;
     height: 435px;
   }
-  &__info{
-
+  &__info {
+    background: #FFFFFF;
+    border-radius: 3px;
+    padding: 45px 40px 100px 85px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 110px;
+      height: 100%;
+      background: #fff;
+      right: 100%;
+      top: 0;
+      z-index: -1;
+    }
   }
-  &__name{
-
+  &__name {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1.2;
+    color: #000000;
+    max-width: 540px;
+    margin-bottom: 15px;
   }
-  &__specialty{
+  &__specialty {
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 1.2;
+    color: #878793;
+    margin-bottom: 65px;
+  }
+  ul {
+    li {
+      font-weight: normal;
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 25px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: 0;
+        width: 12px;
+        height: 5px;
+        background: #B40600;
+        border-radius: 10px;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 
+@media (max-width: $xl) {
+  .team-inner {
+    &__photo{
+      width: 300px;
+      min-width: 300px;
+      height: 388px;
+    }
+    &__info {
+      padding: 45px 25px 100px 35px;
+      &:before {
+        width: 75px;
+      }
+    }
+  }
+}
+@media (max-width: $lg) {
+  .team-inner {
+    &__photo{
+      width: 270px;
+      min-width: 270px;
+      height: 345px;
+    }
+    &__info {
+      padding: 45px 25px 50px 35px;
+      &:before {
+        width: 60px;
+      }
+    }
+    &__name{
+      font-size: 34px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .team-inner {
+    &__row{
+      display: flex;
+      margin-bottom: 30px;
+    }
+    &__photo{
+      margin-left: -20px;
+      margin-right: 20px;
+      width: 240px;
+      min-width: 240px;
+      height: 320px;
+    }
+    &__specialty{
+      font-size: 19px;
+    }
+    &__name{
+      margin-top: 15px;
+    }
+    &__info{
+      padding: 0 20px 60px;
+      &:before{
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: $sm) {
+  .team-inner {
+    &__row{
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    &__photo{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 320px;
+      width: 100%;
+      min-width: auto;
+    }
+    &__info{
+      padding: 0;
+    }
+    &__name{
+      font-size: 30px;
+      margin-top: 0;
+    }
+    &__specialty{
+      margin-bottom: 0;
+    }
+    &__padding{
+      padding: 20px 10px 40px;
+    }
   }
 }

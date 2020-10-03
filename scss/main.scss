@@ -11,7 +11,7 @@
 @import "node_modules/normalize.scss/normalize";
 @import "vendors/bootstrap";
 @import "node_modules/bootstrap/scss/bootstrap";
-//@import "node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+@import "node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
 //@import 'vendors/fancy-modal';
 //@import "node_modules/animate.css/animate.min";
 @import "node_modules/swiper/dist/css/swiper";
@@ -50,7 +50,8 @@
 'layout/news-inner',
 'layout/news-page',
 'layout/team',
-'layout/team-inner'
+'layout/team-inner',
+'layout/certificates'
 ;
 
 
@@ -60,7 +61,8 @@
 'components/burger',
 'components/submenu',
 'components/mailing',
-'components/pagination';
+'components/pagination',
+'components/certificates';
 //'components/breadcrumbs',
 //'components/button',
 //'components/modal',
@@ -73,5 +75,7 @@
 
 
 
-
+.fancybox-button--zoom{
+  display: none !important;
+}
 
