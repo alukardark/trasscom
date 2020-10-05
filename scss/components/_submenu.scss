@@ -1,31 +1,55 @@
 .submenu {
   margin-top: 80px;
   margin-bottom: 50px;
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: 2px solid #49495A;
   h1 {
-    margin: 0;
+    margin: 0 0 15px;
+    line-height: 1;
   }
   &__list {
-    padding-bottom: 6px;
+    //padding-bottom: 6px;
     display: flex;
+    height: 45px;
     li {
+      height: 100%;
       margin-right: 35px;
       &:last-of-type {
         margin-right: 0;
       }
     }
     a {
+      display: block;
+      height: 100%;
       font-family: $font-add;
       font-weight: 500;
       font-size: 20px;
       text-transform: uppercase;
       color: #000000;
+      position: relative;
+      transition: .2s ease-in-out color, .2s ease-in-out border-bottom;
+      //border-bottom: 2px solid transparent;
+      &:after{
+        content: '';
+        transition: .3s ease-in-out width;
+        width: 0;
+        transform: translateX(-50%);
+        margin-left: 50%;
+        height: 2px;
+        background: #B40600;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
       &:hover {
-        color: #515151;
+        color: #B40600;
+        //border-bottom-color:#B40600;
+        &:after{
+          width: 100%;
+        }
       }
     }
   }

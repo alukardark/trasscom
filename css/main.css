@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .micromodal-slide {
   display: none; }
 
@@ -9296,7 +9297,9 @@ h4 {
 .header {
   background: #fff;
   padding-top: 18px;
-  padding-bottom: 18px; }
+  padding-bottom: 18px;
+  position: relative;
+  z-index: 2; }
   .header__wrap {
     display: flex;
     align-items: center;
@@ -11453,6 +11456,225 @@ h4 {
   .team-inner__padding {
     padding: 20px 10px 40px; } }
 
+.projects h1 {
+  position: relative;
+  z-index: 1; }
+
+.projects__map {
+  margin-top: -270px;
+  width: calc(100% + 160px);
+  margin-left: -80px;
+  position: relative;
+  margin-bottom: 10px; }
+  .projects__map path {
+    transition: .2s ease-in-out all;
+    stroke: transparent;
+    stroke-width: 0; }
+    .projects__map path.active {
+      stroke: #B40600;
+      stroke-width: 3px; }
+
+.projects [data-marker] {
+  cursor: pointer; }
+
+.projects__info-box {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: .2s ease-in-out transform, .2s ease-in-out opacity, .2s ease-in-out visibility;
+  transform: translateY(-30px);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background: #fff;
+  width: 475px;
+  min-height: 172px;
+  border-bottom: 3px solid #B40600;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); }
+  .projects__info-box:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 37px;
+    height: 24px;
+    -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
+    background: url(../img/triangle.svg) center no-repeat; }
+  .projects__info-box.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible; }
+  .projects__info-box.n-novgorod {
+    bottom: 57.6%;
+    left: 9.5%; }
+  .projects__info-box.moscow {
+    bottom: 46.6%;
+    left: 10.6%; }
+  .projects__info-box.orel {
+    bottom: 44.6%;
+    left: 6.9%; }
+  .projects__info-box.belgorod {
+    bottom: 39.2%;
+    left: 5.6%; }
+  .projects__info-box.rostov-na-donu {
+    bottom: 32%;
+    left: 3.6%; }
+  .projects__info-box.cheboksary {
+    bottom: 39.9%;
+    left: 16.1%; }
+  .projects__info-box.kazan {
+    bottom: 43.5%;
+    left: 19.2%; }
+  .projects__info-box.perm {
+    bottom: 39.5%;
+    left: 24.2%; }
+  .projects__info-box.yekaterinburg {
+    bottom: 34.8%;
+    left: 27.7%; }
+  .projects__info-box.irkutsk {
+    bottom: 19.1%;
+    right: 39.3%; }
+    .projects__info-box.irkutsk:before {
+      left: auto;
+      right: 0;
+      transform: rotateY(-180deg); }
+  .projects__info-box.chita {
+    bottom: 18%;
+    right: 34.1%; }
+    .projects__info-box.chita:before {
+      left: auto;
+      right: 0;
+      transform: rotateY(-180deg); }
+
+.projects__info-box-text {
+  padding: 24px 24px 10px; }
+  .projects__info-box-text p {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000000;
+    padding-left: 14px;
+    border-left: 2px solid #C4C4C4; }
+
+.projects__info-box-title {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 18px;
+  text-decoration-line: underline;
+  color: #B40600;
+  line-height: 1.2; }
+
+.projects__info-box-count {
+  font-size: 16px;
+  color: #49495A;
+  display: inline-block;
+  line-height: 1;
+  margin-left: 15px;
+  font-weight: normal; }
+
+.projects__info-box-img {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  width: 165px;
+  min-width: 165px;
+  min-height: 100%; }
+
+.projects__сities {
+  padding-bottom: 50px; }
+
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5); }
+  .projects__list:last-of-type {
+    border-bottom: none; }
+
+.projects__city {
+  font-family: "PF DinDisplay Pro";
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 30px;
+  padding-top: 35px; }
+
+.projects__item {
+  display: flex;
+  max-width: 480px;
+  margin-right: 90px;
+  margin-bottom: 40px; }
+  .projects__item p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0; }
+
+.projects__img {
+  margin-right: 20px;
+  width: 173px;
+  min-width: 173px;
+  height: 144px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+@media (max-width: 1320px) {
+  .projects__map {
+    width: 100%;
+    margin-left: 0; } }
+
+@media (max-width: 1199px) {
+  .projects__list {
+    justify-content: space-between; }
+  .projects__item {
+    max-width: 430px;
+    margin-right: 0; } }
+
+@media (max-width: 989px) {
+  .projects__map {
+    margin-top: -150px; }
+  .projects__item {
+    margin-bottom: 33px;
+    max-width: 520px; }
+  .projects__city {
+    padding-top: 25px;
+    font-size: 30px; } }
+
+@media (max-width: 767px) {
+  .projects__map {
+    margin-top: -170px; }
+    .projects__map path {
+      stroke: transparent !important;
+      stroke-width: 0 !important; }
+  .projects__info-box {
+    display: none !important; }
+  .projects__city {
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-top: 20px; } }
+
+@media (max-width: 575px) {
+  .projects__map {
+    margin-top: -100px; }
+  .projects__item {
+    flex-direction: column;
+    margin-bottom: 35px; }
+  .projects__img {
+    margin-right: 0;
+    width: 163px;
+    min-width: 163px;
+    height: 100px;
+    margin-bottom: 15px; }
+  .projects__city {
+    padding-top: 25px; }
+  .projects__сities {
+    padding-bottom: 0px; } }
+
 .certificates__list {
   display: flex;
   justify-content: space-between;
@@ -11611,28 +11833,46 @@ h4 {
 .submenu {
   margin-top: 80px;
   margin-bottom: 50px;
-  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: 2px solid #49495A; }
   .submenu h1 {
-    margin: 0; }
+    margin: 0 0 15px;
+    line-height: 1; }
   .submenu__list {
-    padding-bottom: 6px;
-    display: flex; }
+    display: flex;
+    height: 45px; }
     .submenu__list li {
+      height: 100%;
       margin-right: 35px; }
       .submenu__list li:last-of-type {
         margin-right: 0; }
     .submenu__list a {
+      display: block;
+      height: 100%;
       font-family: "PF DinDisplay Pro";
       font-weight: 500;
       font-size: 20px;
       text-transform: uppercase;
-      color: #000000; }
+      color: #000000;
+      position: relative;
+      transition: .2s ease-in-out color, .2s ease-in-out border-bottom; }
+      .submenu__list a:after {
+        content: '';
+        transition: .3s ease-in-out width;
+        width: 0;
+        transform: translateX(-50%);
+        margin-left: 50%;
+        height: 2px;
+        background: #B40600;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
       .submenu__list a:hover {
-        color: #515151; }
+        color: #B40600; }
+        .submenu__list a:hover:after {
+          width: 100%; }
 
 @media (max-width: 989px) {
   .submenu {

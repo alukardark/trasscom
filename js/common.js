@@ -119,9 +119,60 @@ jQuery(document).ready(function ($) {
         });
     } else {
         $('.header__search ').removeClass('hide');
-        $('.header__mobile-back ').addClass('hide')
+        $('.header__mobile-back ').addClass('hide');
 
         $('.header__menu:not(.header__menu--submenu)').removeClass('hide');
         $('.header__menu--submenu').addClass('hide');
     }
+
+
+
+    function mapRegions(){
+        var $region = '';
+        if (window.matchMedia('(max-width: 767px)').matches) {
+            $("[data-marker]").unbind('click');
+            $("[data-marker]").click(function () {
+                var elementClick = $(this).attr("data-marker");
+                console.log(elementClick);
+                var destination = $("#"+elementClick).offset().top;
+                jQuery("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 800);
+                return false;
+            });
+        }else{
+            $("[data-marker]").unbind('click');
+            $("[data-marker]").bind('click', function(){
+                $region = $(this).attr("data-marker");
+                $("path[class], .projects__info-box").removeClass('active');
+                $("svg ."+$region).addClass('active');
+                $(".projects__info-box."+$region).addClass('active');
+            });
+        }
+    }
+
+    mapRegions();
+    $(window).resize(function() {
+        mapRegions();
+    });
+
+
+
+
+    $(document).mouseup(function (e){
+        var div = $(".projects__info-box, [data-marker]");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $("path[class], .projects__info-box").removeClass('active');
+        }
+    });
+
+
+    $("a.projects__info-box-title").on('click', function() {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+        return false;
+    });
 });
