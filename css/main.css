@@ -10007,16 +10007,16 @@ h4 {
   .main__services-item-title {
     font-size: 21px;
     line-height: 25px; }
-  .main__about-col img {
-    margin-right: 25px; }
+  .main__about-col {
+    padding: 25px 15px 5px; }
+    .main__about-col img {
+      margin-right: 25px; }
   .main__about-offer h2 {
     margin-bottom: 15px; }
   .main__about-offer p {
     margin-bottom: 30px; }
   .main__about-wrap {
     margin-bottom: 110px; }
-  .main__about-col {
-    padding: 25px 15px 5px; }
   .main__about-offer p {
     font-size: 20px; } }
 
@@ -11606,7 +11606,10 @@ h4 {
   display: flex;
   max-width: 480px;
   margin-right: 90px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  transition: .2s ease-in-out opacity; }
+  .projects__item:hover {
+    opacity: .8; }
   .projects__item p {
     font-weight: 500;
     font-size: 16px;
@@ -11771,6 +11774,391 @@ h4 {
     margin-bottom: 40px; }
   .certificates__img {
     height: 340px; } }
+
+.company__header-row {
+  display: flex;
+  align-items: center; }
+
+.company__video {
+  margin-right: 75px;
+  border-radius: 50%;
+  min-width: 287px;
+  width: 287px;
+  height: 287px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  background: url(../img/video-cover.png) center/cover no-repeat; }
+  .company__video i {
+    display: block;
+    width: 61px;
+    height: 61px;
+    margin-bottom: 10px;
+    transition: .2s ease-in-out transform;
+    background: url(../img/play.svg) center/contain no-repeat; }
+  .company__video:hover {
+    color: #fff; }
+    .company__video:hover i {
+      transform: scale(0.9); }
+
+.company h3 {
+  margin: 70px 0 50px;
+  font-family: "PF DinDisplay Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  color: #000000; }
+
+.company__works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px; }
+  .company__works li {
+    background-color: #fff;
+    width: 368px;
+    height: 170px;
+    margin-bottom: 18px;
+    font-family: "PF DinDisplay Pro";
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 15px 130px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 20px 50%; }
+    .company__works li:nth-of-type(1) {
+      background-position: 45px 50%;
+      background-image: url(../img/work-1.svg); }
+    .company__works li:nth-of-type(2) {
+      background-image: url(../img/work-2.svg); }
+    .company__works li:nth-of-type(3) {
+      background-image: url(../img/work-3.svg); }
+    .company__works li:nth-of-type(4) {
+      background-image: url(../img/work-4.svg); }
+    .company__works li:nth-of-type(5) {
+      background-image: url(../img/work-5.svg); }
+    .company__works li:nth-of-type(6) {
+      background-image: url(../img/work-6.svg); }
+    .company__works li:nth-of-type(7) {
+      background-image: url(../img/work-7.svg); }
+    .company__works li:nth-of-type(8) {
+      background-image: url(../img/work-8.svg); }
+    .company__works li:nth-of-type(9) {
+      background-image: url(../img/work-9.svg); }
+
+.company__row {
+  display: flex;
+  justify-content: space-between; }
+
+.company__col {
+  max-width: 512px; }
+
+.company__partners {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between; }
+  .company__partners li {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .company__partners li img {
+      max-width: 100%; }
+
+.company ul.list li {
+  font-weight: normal;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px; }
+  .company ul.list li:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 12px;
+    height: 5px;
+    background: #B40600;
+    border-radius: 10px; }
+
+.company ol {
+  list-style: none;
+  counter-reset: li;
+  display: flex;
+  flex-wrap: wrap; }
+  .company ol li {
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000;
+    position: relative;
+    counter-increment: li;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-right: 15px; }
+    .company ol li:before {
+      margin-right: 20px;
+      content: counter(li);
+      font-style: normal;
+      font-weight: bold;
+      font-size: 45px;
+      color: #000000;
+      border: 1px solid #B40600;
+      border-radius: 50%;
+      width: 75px;
+      min-width: 75px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0; }
+
+.company__attention {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 25px 60px 25px;
+  margin: 75px 0; }
+  .company__attention p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000; }
+  .company__attention:before {
+    content: '!';
+    font-family: "PF DinDisplay Pro";
+    font-weight: bold;
+    font-size: 58px;
+    color: #000000;
+    line-height: 0;
+    padding-top: 12px;
+    margin-right: 65px;
+    display: block; }
+
+.company__about-table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 70px; }
+
+.company__about-col {
+  background: #fff;
+  width: 50%;
+  display: flex;
+  border: 1px solid rgba(27, 27, 27, 0.1);
+  padding: 50px 40px 70px;
+  flex-direction: row;
+  align-items: flex-start; }
+  .company__about-col:nth-of-type(1), .company__about-col:nth-of-type(2) {
+    border-bottom: none; }
+  .company__about-col:nth-of-type(2n+1) {
+    border-right: none; }
+  .company__about-col img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 0;
+    margin-right: 30px; }
+  .company__about-col h4 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 0.95;
+    margin-bottom: 20px; }
+    .company__about-col h4 strong {
+      color: #B40600; }
+  .company__about-col p {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0; }
+
+@media (max-width: 1199px) {
+  .company h3 {
+    margin: 60px 0 40px; }
+  .company__works {
+    margin-bottom: 40px; }
+    .company__works li {
+      width: 305px;
+      margin-bottom: 12px;
+      font-size: 18px; }
+  .company__col {
+    max-width: 430px; }
+    .company__col p {
+      font-size: 16px;
+      margin-bottom: 20px; }
+  .company__partners li img {
+    max-width: 84%; }
+  .company ol li {
+    font-size: 16px;
+    width: 50%;
+    margin-bottom: 45px; }
+  .company ul.list li {
+    font-size: 16px; }
+    .company ul.list li:before {
+      top: 11px; }
+  .company__attention:before {
+    margin-right: 50px; }
+  .company__attention p {
+    font-size: 16px; }
+  .company__about-col {
+    padding: 40px 30px 50px; } }
+
+@media (max-width: 989px) {
+  .company h3 {
+    font-size: 30px;
+    margin: 50px 0 30px; }
+  .company__video {
+    margin-right: 33px;
+    min-width: 244px;
+    width: 244px;
+    height: 244px;
+    font-size: 20px;
+    padding: 25px; }
+  .company__works li {
+    width: 233px;
+    height: 203px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 15px 15px 20px;
+    background-position: 20px 25%; }
+    .company__works li:nth-of-type(1) {
+      background-position: 20px 30%; }
+  .company__row {
+    flex-direction: column; }
+  .company__col {
+    max-width: 100%; }
+  .company__partners {
+    margin-top: 30px; }
+  .company__attention {
+    padding: 25px 40px 25px;
+    margin: 60px 0 0; }
+    .company__attention:before {
+      margin-right: 30px; }
+  .company__about-col {
+    padding: 40px 20px 50px; }
+    .company__about-col h4 {
+      font-size: 32px; }
+    .company__about-col img {
+      margin-right: 15px;
+      max-width: 50px; } }
+
+@media (max-width: 767px) {
+  .company h3 {
+    font-size: 26px;
+    margin: 50px 0 30px; }
+  .company__header-row {
+    flex-direction: column;
+    align-items: flex-start; }
+  .company__header-col:first-of-type {
+    order: 1; }
+  .company__header-col:last-of-type {
+    order: 0; }
+  .company__video {
+    min-width: 208px;
+    width: 208px;
+    height: 208px;
+    font-size: 16px;
+    margin-top: 15px; }
+    .company__video i {
+      height: 54px;
+      width: 54px; }
+  .company__works {
+    margin-bottom: 30px; }
+    .company__works li {
+      width: 165px;
+      height: 184px;
+      font-size: 16px;
+      padding: 10px 10px 15px;
+      background-position: 10px 30px;
+      background-size: 60px 60px; }
+      .company__works li:nth-of-type(1) {
+        background-position: 10px 30px; }
+  .company__partners {
+    flex-wrap: wrap; }
+    .company__partners li {
+      margin-bottom: 20px; }
+      .company__partners li img {
+        max-width: 80%; }
+  .company__attention {
+    padding: 25px 20px 25px 30px;
+    margin: 50px 0 0; }
+    .company__attention:before {
+      margin-right: 20px; }
+  .company ol {
+    flex-direction: column; }
+    .company ol li {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 12px;
+      padding-right: 0; }
+  .company__about-table {
+    flex-direction: column;
+    margin-bottom: 45px; }
+  .company__about-col {
+    width: 100%;
+    padding: 30px 15px 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important; }
+    .company__about-col:nth-of-type(3) {
+      border-bottom: none; }
+    .company__about-col h4 {
+      margin-bottom: 15px; }
+    .company__about-col p {
+      line-height: 1.4;
+      font-size: 18px; } }
+
+@media (max-width: 575px) {
+  .company__works li {
+    background-image: none !important;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 20px 15px 17px;
+    margin-bottom: 10px; }
+  .company__partners {
+    justify-content: center; }
+    .company__partners li {
+      margin: 15px 15px 0px; }
+  .company__attention {
+    padding: 15px 25px 35px;
+    flex-direction: column;
+    align-items: flex-start; }
+    .company__attention:before {
+      position: static;
+      display: block;
+      line-height: 1;
+      margin-bottom: 10px; }
+  .company ol li {
+    align-items: flex-start;
+    margin-bottom: 15px; }
+    .company ol li:before {
+      min-width: 42px;
+      width: 42px;
+      height: 42px;
+      font-size: 25px;
+      margin-right: 12px; }
+  .company__about-col {
+    padding: 20px 15px 35px; }
+    .company__about-col h4 {
+      font-size: 24px; }
+    .company__about-col img {
+      margin-right: 20px;
+      width: 40px; }
+    .company__about-col p {
+      font-size: 16px; } }
 
 .burger {
   cursor: pointer;
