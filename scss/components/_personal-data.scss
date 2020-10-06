@@ -1,0 +1,22 @@
+.personal-data{
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  margin-top: 30px;
+  a{
+    text-decoration: underline;
+    transition: .2s ease-in-out text-decoration-color, .2s ease-in-out color;
+    &:hover{
+      text-decoration-color: transparent;
+      color: #B40600;
+    }
+  }
+}
+@media (max-width: $sm) {
+  .personal-data{
+    font-size: 12px;
+    max-width: 100%;
+  }
+}

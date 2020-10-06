@@ -20,6 +20,7 @@ gulp.task('scripts', function() {
         'node_modules/bodymovin/build/player/bodymovin.min.js',
         'node_modules/js-cookie/src/js.cookie.js',
         'node_modules/swiper/dist/js/swiper.min.js',
+        'node_modules/inputmask/dist/jquery.inputmask.min.js',
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
 
+    $("input[type='tel']").inputmask({"mask": "+7(999) 999-9999"});
+
     var mainSwiper = new Swiper('.main__slider .swiper-container', {
         loop: true,
         slidesPerView: 1,
@@ -175,4 +177,8 @@ jQuery(document).ready(function ($) {
         }, 800);
         return false;
     });
+
+
+
+
 });
